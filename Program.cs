@@ -35,7 +35,7 @@ class Program
                 continue;
             }
 
-            Console.WriteLine("\n------------------------------------------------------------------------------------");
+            Console.WriteLine("\n-------------------------------------------------------------------------------------------");
 
             if (command.StartsWith("create"))
             {
@@ -61,11 +61,11 @@ class Program
             else if (command.StartsWith("list"))
             {
                 //Console.WriteLine("Id\tTitle\t\tDescription\t\tDueDate");
-                Console.WriteLine("{0,-40} {1,-20} {2,-10} {3,-10}", "Id", "Title", "Description", "DueDate");
+                Console.WriteLine("{0,-40} {1,-15} {2,-15} {3,0}", "Id", "Title", "Description", "DueDate");
 
-                Console.WriteLine("------------------------------------------------------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------------------------------------");
 
-                todoList.ForEach(i => Console.WriteLine($"{i.Id,-40} {i.Title,-15} {i.Description,-20} {i.DueDate}"));
+                todoList.ForEach(i => Console.WriteLine($"{i.Id,-40} {i.Title,-15} {i.Description,-15} {i.DueDate}"));
             }
 
 
@@ -105,7 +105,7 @@ class Program
                     continue;
                 }
                 Console.Write("Id\tTitle\t\tDescription\t\tDueDate\n");
-                Console.WriteLine("------------------------------------------------------------------------------------\n");
+                Console.WriteLine("-------------------------------------------------------------------------------------------\n");
                 foreach (var todo in todoList)
                 {
                     if (todo.Title.ToLower().Contains(todoParams[1].ToLower()))
@@ -116,7 +116,7 @@ class Program
             }
 
             Console.WriteLine("Your command: {0}", command);
-            Console.WriteLine("------------------------------------------------------------------------------------\n");
+            Console.WriteLine("-------------------------------------------------------------------------------------------\n");
         }
     }
 }
